@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.appppp {
+}
+#root {
+  --main-bg-side-dark: #212529;
+  --main-bg-pagebox-dark: #1f2125;
+  --main-bg-box-dark: #2d3136;
+  --main-bg-box-item-dark: #2a2e32;
+  --text-dark: white;
+  --main-bg-cool-rgb-dark: rgba(255, 255, 255, 0.2);
+
+  --main-bg-pagebox-white: #f7f6fb;
+  --main-bg-box-item-white: #f7f6fb;
+  --main-bg-box-white: #f7f6fb;
+  --main-bg--side-white: #fff;
+  --text-light: #191919;
+  --main-bg-cool-rgb-white: rgba(0, 0, 0, 0.2);
+}
+
+[color-scheme="dark"] {
+  --main-bg-side: var(--main-bg-side-dark);
+  --text: var(--text-dark);
+  --main-bg-box: var(--main-bg-box-dark);
+  --main-bg-box-item: var(--main-bg-box-item-dark);
+  --main-bg-cool-rgb: var(var(--main-bg-cool-rgb-dark));
+  --main-bg-pagebox: var(var(--main-bg-pagebox-dark));
+}
+[color-scheme="light"] {
+  --main-bg-side: var(--main-bg--side-white);
+  --text: var(--text-light);
+  --main-bg-box: var(--main-bg-box-white);
+  --main-bg-box-item: var(--main-bg-box-item-white);
+  --main-bg-cool-rgb: var(--main-bg-cool-rgb-white);
+  --main-bg-pagebox: var(var(--main-bg-pagebox-white));
+}
+html {
+  background-color: var(--main-bg-pagebox);
+}
+.loading {
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--main-bg-box-item);
+}
+.loading img {
+  width: 150px;
+  height: 150px;
+}
