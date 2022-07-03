@@ -33,7 +33,7 @@ class EditCollection extends Component {
           collectionNewnmae: this.state.name,
         };
         axios
-          .post(`${ApiUrl.Three}changeCollectionname`, option)
+          .post(`/api/changeCollectionname`, option)
           .then((res) => {
             window.location.reload();
           });

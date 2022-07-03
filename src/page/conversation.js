@@ -48,7 +48,7 @@ class Conversation extends Component {
       formData.append("friend", this.props.match.params.id);
       formData.append("kind", file[0].type);
       axios
-        .post(`${ApiUrl.Messaging}save-image-or-video-message`, formData)
+        .post(`/api/save-image-or-video-message`, formData)
         .then((res) => {
           if (res.data._id) {
             let listt = [...this.props.inbox];
@@ -97,7 +97,7 @@ class Conversation extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Messaging}their-conversation/${this.state.friend.conversationId}/${this.props.user.userid}/${this.props.match.params.id}`,
+        `/api/their-conversation/${this.state.friend.conversationId}/${this.props.user.userid}/${this.props.match.params.id}`,
         { cancelToken: source.token }
       )
       .then((res) => {
@@ -153,7 +153,7 @@ class Conversation extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}getinfocon/${this.props.user.userid}/with/${this.props.match.params.id}`,
+        `/api/getinfocon/${this.props.user.userid}/with/${this.props.match.params.id}`,
         { cancelToken: source.token }
       )
       .then((res) => {
@@ -207,7 +207,7 @@ class Conversation extends Component {
           kind: "message",
         },
       };
-      axios.post(`${ApiUrl.Messaging}new-message`, option).then((res) => {
+      axios.post(`/api/new-message`, option).then((res) => {
         if (res.data._id) {
           let message = res.data.message[res.data.message.length - 1];
           message.friend = this.props.match.params.id;

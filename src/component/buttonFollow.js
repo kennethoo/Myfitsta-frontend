@@ -24,7 +24,7 @@ class ButtonFollow extends Component {
       date: moment().format(),
       extraInfo: "",
     };
-    axios.post(`${ApiUrl.Three}update-notification`, option).then((res) => {});
+    axios.post(`/api/update-notification`, option).then((res) => {});
   };
 
   activeFollow = () => {

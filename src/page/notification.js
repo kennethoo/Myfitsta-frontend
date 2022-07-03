@@ -45,7 +45,7 @@ class Notification extends Component {
 
   loadNotification = () => {
     axios
-      .get(`${ApiUrl.Three}load-notiionbasic/${this.props.user.userid}/${10}`, {
+      .get(`/api/load-notiionbasic/${this.props.user.userid}/${10}`, {
         cancelToken: source.token,
       })
       .then((res) => {
@@ -67,7 +67,7 @@ class Notification extends Component {
 
   loadNotificationPro = () => {
     axios
-      .get(`${ApiUrl.Three}load-notiionpro/${this.props.user.userid}/${10}`, {
+      .get(`/api/load-notiionpro/${this.props.user.userid}/${10}`, {
         cancelToken: source.token,
       })
       .then((res) => {
@@ -98,7 +98,7 @@ class Notification extends Component {
   handleUpdateCount = () => {
     axios
       .post(
-        `${ApiUrl.Three}update-number-of-notification/${this.props.user.userid}`
+        `/api/update-number-of-notification/${this.props.user.userid}`
       )
       .then((result) => {
         return;

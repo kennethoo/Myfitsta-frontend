@@ -12,7 +12,7 @@ class SuggectionBox extends Component {
 
   callAi = () => {
     axios
-      .get(`${ApiUrl.Three}suggstion-for-you/${this.props.users.userid}`)
+      .get(`/api/suggstion-for-you/${this.props.users.userid}`)
       .then((res) => {
         if (res.data !== "no") {
           let list = [...this.state.list, ...res.data];

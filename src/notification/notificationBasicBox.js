@@ -45,7 +45,7 @@ class NotificationBasicBox extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}load-notiionbasic/${this.props.userid}/${this.state.numberToLoad}`,
+        `/api/load-notiionbasic/${this.props.userid}/${this.state.numberToLoad}`,
         { cancelToken: source.token }
       )
       .then((res) => {

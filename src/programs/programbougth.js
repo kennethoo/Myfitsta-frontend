@@ -10,7 +10,7 @@ class ProgramBought extends Component {
   };
   componentDidMount = () => {
     axios
-      .get(`${ApiUrl.Pay}program-bought/${this.props.programid}`)
+      .get(`/api/program-bought/${this.props.programid}`)
       .then((result) => {
         if (result.data !== "no") {
           this.setState({

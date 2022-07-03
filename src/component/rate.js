@@ -16,7 +16,7 @@ class Rate extends Component {
   loadRate = () => {
     axios
       .get(
-        `${ApiUrl.Three}load-my-rate/${this.props.userid}/${this.props.programId}`
+        `/api/load-my-rate/${this.props.userid}/${this.props.programId}`
       )
       .then((res) => {
         if (res.data.AnthorId) {
@@ -39,7 +39,7 @@ class Rate extends Component {
         review: this.state.review,
       };
 
-      axios.post(`${ApiUrl.Three}rate-programs`, option).then((res) => {
+      axios.post(`/api/rate-programs`, option).then((res) => {
         this.props.openRate(false);
         this.props.updateReview();
       });

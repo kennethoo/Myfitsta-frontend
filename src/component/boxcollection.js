@@ -56,7 +56,7 @@ class Boxcollection extends Component {
       file: this.props.file,
     };
     axios
-      .post(`${ApiUrl.Three}delete/WorkoiutCollection`, option)
+      .post(`/api/delete/WorkoiutCollection`, option)
       .then((res) => {
         this.getCollection();
       });

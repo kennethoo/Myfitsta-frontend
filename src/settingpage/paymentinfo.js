@@ -27,7 +27,7 @@ class PaymentInfo extends Component {
       item: data,
     };
     axios
-      .post(`${ApiUrl.Pay}api/braintree/v1/remove-payment-methode`, option)
+      .post(`/api/api/braintree/v1/remove-payment-methode`, option)
       .then((result) => {
         window.location.reload();
       });
@@ -41,7 +41,7 @@ class PaymentInfo extends Component {
     let option = {
       userid: this.props.users.userid,
     };
-    axios.post(`${ApiUrl.Pay}my-payment-methode`, option).then((result) => {
+    axios.post(`/api/my-payment-methode`, option).then((result) => {
       if (result.data._id) {
         this.setState({
           acountD: result.data,

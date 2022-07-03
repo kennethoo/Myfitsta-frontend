@@ -43,7 +43,7 @@ class Discover extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}discover-tags/${this.state.id.replace("#", "")}/${
+        `/api/discover-tags/${this.state.id.replace("#", "")}/${
           this.props.user.userid
         }/${number}`,
         { cancelToken: source.token }

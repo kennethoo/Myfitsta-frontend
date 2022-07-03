@@ -23,7 +23,7 @@ class Newmessage extends Component {
       if (this.props.user.Username) {
         axios
           .get(
-            `${ApiUrl.Three}Myfollowings/${this.props.user.userid}/myfitsta/10`
+            `/api/Myfollowings/${this.props.user.userid}/myfitsta/10`
           )
           .then((result) => {
             let list = [];

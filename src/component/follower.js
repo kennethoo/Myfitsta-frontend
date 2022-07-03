@@ -30,7 +30,7 @@ class Follower extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}Myfollowers/${this.props.user}/${this.state.value}/${number}`
+        `/api/Myfollowers/${this.props.user}/${this.state.value}/${number}`
       )
       .then((result) => {
         this.setState({

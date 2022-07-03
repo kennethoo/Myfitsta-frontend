@@ -22,7 +22,7 @@ class SubscriberList extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}load-my-subscriber/${this.props.user}/${this.state.value}/${number}`
+        `/api/load-my-subscriber/${this.props.user}/${this.state.value}/${number}`
       )
       .then((result) => {
         if (result.data !== "no") {

@@ -23,7 +23,7 @@ class Paymentmethod extends Component {
       userid: this.props.users.userid,
     };
 
-    axios.post(`${ApiUrl.Pay}my-payment-methode`, option).then((result) => {
+    axios.post(`/api/my-payment-methode`, option).then((result) => {
       console.log(result);
       if (result.data._id) {
         if (result.data.paymentTokens.length > 0) {
@@ -55,7 +55,7 @@ class Paymentmethod extends Component {
       loading: true,
     });
     axios
-      .post(`${ApiUrl.Pay}api/braintree/v1/sandbox`, option)
+      .post(`/api/api/braintree/v1/sandbox`, option)
       .then((result) => {
         if (result.data.success == true) {
           this.props.history.push(

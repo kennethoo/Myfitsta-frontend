@@ -46,7 +46,7 @@ class LikeButton extends Component {
 
     if (this.props.userid !== this.props.posterId) {
       axios
-        .post(`${ApiUrl.Three}update-notification`, option)
+        .post(`/api/update-notification`, option)
         .then((res) => {});
     }
     socket.emit("some-like-a-post", {

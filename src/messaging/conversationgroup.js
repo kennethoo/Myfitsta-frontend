@@ -23,7 +23,7 @@ class ConversationGroup extends Component {
       conversationId: this.props.group.conversationId,
       userid: this.props.users.userid,
     };
-    axios.post(`${ApiUrl.Messaging}exit-group`, option).then((result) => {
+    axios.post(`/api/exit-group`, option).then((result) => {
       this.props.handleDetail(false);
       let list = this.props.inbox.filter(
         (item) => item.conversationId !== this.props.group.conversationId

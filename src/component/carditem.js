@@ -14,7 +14,7 @@ class CardItem extends Component {
       userid: this.props.users.userid,
       programId: item,
     };
-    axios.post(`${ApiUrl.Three}remove-my-card-info`, option).then((result) => {
+    axios.post(`/api/remove-my-card-info`, option).then((result) => {
       this.props.removeFromCard(item);
     });
   };

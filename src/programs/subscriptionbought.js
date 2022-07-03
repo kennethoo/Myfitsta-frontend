@@ -12,7 +12,7 @@ class SubscriptionBougth extends Component {
   getProgram = (e) => {
     axios
       .get(
-        `${ApiUrl.Two}load-my-active-pwo/${this.props.user}/to/${this.props.users.userid}`
+        `/api/load-my-active-pwo/${this.props.user}/to/${this.props.users.userid}`
       )
       .then((res) => {
         console.log(res);

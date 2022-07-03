@@ -19,7 +19,7 @@ class MenuMessage extends Component {
 
     this.props.handleRemove(this.props.item._id);
     axios
-      .post(`${ApiUrl.Messaging}remove-message/from/conversation`, option)
+      .post(`/api/remove-message/from/conversation`, option)
       .then((result) => {});
   };
   handleclick = (data, e) => {

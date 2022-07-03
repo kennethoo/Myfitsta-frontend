@@ -21,7 +21,7 @@ class Shopcard extends Component {
   check = () => {
     axios
       .get(
-        `${ApiUrl.Three}check-if-bougth/${this.props.user.userid}/${this.props.item.programId}`
+        `/api/check-if-bougth/${this.props.user.userid}/${this.props.item.programId}`
       )
       .then((result) => {
         this.setState({

@@ -12,7 +12,7 @@ class DeleteProgram extends Component {
       programId: this.props.program.programId,
     };
     axios
-      .post(`${ApiUrl.Three}handle-the-delete-program`, option)
+      .post(`/api/handle-the-delete-program`, option)
       .then((result) => {
         window.location.reload();
       });

@@ -23,7 +23,7 @@ class Publish extends Component {
       };
 
       axios
-        .post(`${ApiUrl.Three}publish-a-program`, option)
+        .post(`/api/publish-a-program`, option)
         .then((result) => {
           this.props.changePublichState();
           this.props.handlepublish(false);

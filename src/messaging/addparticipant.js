@@ -21,7 +21,7 @@ class AddParticipant extends Component {
         conversationId: this.props.group,
         members: this.state.selected,
       };
-      axios.post(`${ApiUrl.Messaging}add-members`, option).then((result) => {
+      axios.post(`/api/add-members`, option).then((result) => {
         this.props.handleaddParti();
       });
     }

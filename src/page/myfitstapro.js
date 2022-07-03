@@ -60,7 +60,7 @@ class Myfitstapro extends Component {
 
   getProgram = (e) => {
     axios
-      .get(`${ApiUrl.Two}load-my-pwo/${this.props.user.userid}`, {
+      .get(`/api/load-my-pwo/${this.props.user.userid}`, {
         cancelToken: source.token,
       })
       .then((res) => {

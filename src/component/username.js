@@ -30,7 +30,7 @@ class Username extends Component {
       });
     } else {
       axios
-        .get(`${ApiUrl.Three}username/${this.props.user}`, {
+        .get(`/api/username/${this.props.user}`, {
           cancelToken: source.token,
         })
         .then((res) => {

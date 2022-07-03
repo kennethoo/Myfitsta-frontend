@@ -10,7 +10,7 @@ class ProIcon extends Component {
   };
 
   checklive = () => {
-    axios.get(`${ApiUrl.Three}check-live/${this.props.user}`).then((res) => {
+    axios.get(`/api/check-live/${this.props.user}`).then((res) => {
       if (res.data !== "no") {
         this.setState({
           live: res.data,
@@ -20,7 +20,7 @@ class ProIcon extends Component {
   };
 
   loadImage = () => {
-    axios.get(`${ApiUrl.Three}iconpro/${this.props.user}`).then((res) => {
+    axios.get(`/api/iconpro/${this.props.user}`).then((res) => {
       if (res.data !== "no") {
         this.setState({
           icon: res.data,

@@ -9,7 +9,7 @@ class TagggedPost extends Component {
   };
 
   loadTagged = () => {
-    axios.get(`${ApiUrl.Three}Taggeg/${this.props.user}`).then((result) => {
+    axios.get(`/api/Taggeg/${this.props.user}`).then((result) => {
       if (result.data !== "null") {
         this.setState({
           list: result.data.file,

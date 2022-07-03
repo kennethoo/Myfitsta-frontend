@@ -19,7 +19,7 @@ class SharePost extends Component {
 
   loadPeople = () => {
     axios
-      .get(`${ApiUrl.Three}my-conversation/${this.props.user.userid}`)
+      .get(`/api/my-conversation/${this.props.user.userid}`)
       .then((res) => {
         if (res.data !== "no") {
           this.setState({
@@ -61,7 +61,7 @@ class SharePost extends Component {
     axios
       .post(`/api/add/to/conversattion`, optionone, { withCredentials: true })
       .then((result) => {
-        axios.post(`${ApiUrl.Three}new-message`, option).then((result) => {
+        axios.post(`/api/new-message`, option).then((result) => {
           people++;
 
           if (people == this.state.selected.length) {

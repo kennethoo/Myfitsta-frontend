@@ -26,7 +26,7 @@ class Addprogram extends Component {
         loadind: true,
       });
       axios
-        .post(`${ApiUrl.Two}add-a-new-program-with-no-image-or-video`, program)
+        .post(`/api/add-a-new-program-with-no-image-or-video`, program)
         .then((res) => {
           if (res.data == "change the title") {
             console.log("chage it");

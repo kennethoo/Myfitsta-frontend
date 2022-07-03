@@ -13,7 +13,7 @@ class DeleteCollection extends Component {
       id: this.props.collection.userId,
       collectionName: this.props.collection.collectionName,
     };
-    axios.post(`${ApiUrl.Three}delete/Collection`, option).then((res) => {
+    axios.post(`/api/delete/Collection`, option).then((res) => {
       window.location.reload();
     });
   };

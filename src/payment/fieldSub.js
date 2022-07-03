@@ -17,7 +17,7 @@ class Field extends Component {
     try {
       // Get a client token for authorization from your server
       const response = await axios.get(
-        `${ApiUrl.Pay}api/braintree/v1/getToken`
+        `/api/api/braintree/v1/getToken`
       );
       const clientToken = response.data.clientToken;
       this.setState({ clientToken });
@@ -100,7 +100,7 @@ class Field extends Component {
               loading: true,
             });
             axios
-              .post(`${ApiUrl.Pay}api/braintree/subscription`, option)
+              .post(`/api/api/braintree/subscription`, option)
               .then((result) => {
                 if (result.data.success == true) {
                   window.location.reload();

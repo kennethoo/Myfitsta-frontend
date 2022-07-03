@@ -57,7 +57,7 @@ class Shoping extends Component {
   getProgram = (e) => {
     axios
       .get(
-        `${ApiUrl.Two}load-my-active-pwo/${this.state.profile.userid}/to/${this.props.user.userid}`,
+        `/api/load-my-active-pwo/${this.state.profile.userid}/to/${this.props.user.userid}`,
         { cancelToken: source.token }
       )
       .then((res) => {
@@ -89,7 +89,7 @@ class Shoping extends Component {
         typeofSubscription: this.state.profile.accountType,
       };
 
-      axios.post(`${ApiUrl.Pay}newSubcribert`, option).then((res) => {
+      axios.post(`/api/newSubcribert`, option).then((res) => {
         window.location.reload();
       });
     } else {

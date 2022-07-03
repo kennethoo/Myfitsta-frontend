@@ -27,7 +27,7 @@ class EditName extends Component {
         name: this.state.groupname,
       };
       axios
-        .post(`${ApiUrl.Messaging}change-group-name`, option)
+        .post(`/api/change-group-name`, option)
         .then((result) => {
           socket.emit("name-group-change", {
             name: this.state.groupname,

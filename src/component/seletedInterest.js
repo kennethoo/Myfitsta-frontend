@@ -386,7 +386,7 @@ class SelctedInterest extends Component {
         accountId: this.props.users.userid,
         tags: this.state.selected,
       };
-      axios.post(`${ApiUrl.Three}save-Interest`, option).then((result) => {
+      axios.post(`/api/save-Interest`, option).then((result) => {
         this.props.UpdateInterest(result.data);
       });
     }

@@ -36,7 +36,7 @@ class UpdateDiscover extends Component {
     });
 
     if (e.target.value.length > 0) {
-      axios.get(`${ApiUrl.Three}suggestion/${e.target.value}`).then((res) => {
+      axios.get(`/api/suggestion/${e.target.value}`).then((res) => {
         if (res.data !== "no") {
           let list = [...new Set(res.data)];
 

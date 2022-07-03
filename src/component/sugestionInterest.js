@@ -21,7 +21,7 @@ class Interest extends Component {
     if (this.props.interest == null) {
     }
     axios
-      .get(`${ApiUrl.Three}load-Interest/${this.props.users.userid}`)
+      .get(`/api/load-Interest/${this.props.users.userid}`)
       .then((result) => {
         if (result.data.accountId) {
           this.props.UpdateInterest(result.data);

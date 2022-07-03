@@ -66,7 +66,7 @@ class Myfitstapr extends Component {
   getProgram = (e) => {
     axios
       .get(
-        `${ApiUrl.Two}load-my-active-pwo/${this.state.profile.userid}/to/${this.props.user.userid}`,
+        `/api/load-my-active-pwo/${this.state.profile.userid}/to/${this.props.user.userid}`,
         { cancelToken: source.token }
       )
       .then((res) => {

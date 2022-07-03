@@ -36,7 +36,7 @@ class Earning extends Component {
   };
   getinfo = () => {
     axios
-      .get(`${ApiUrl.Pay}get-my-earning-data/${this.props.user.userid}`)
+      .get(`/api/get-my-earning-data/${this.props.user.userid}`)
       .then((result) => {
         if (result.data.length > 0) {
           this.setState({

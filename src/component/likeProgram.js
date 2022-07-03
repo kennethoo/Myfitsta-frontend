@@ -36,13 +36,13 @@ class LikeProgram extends Component {
       });
     }
 
-    axios.post(`${ApiUrl.Three}like-a-program`, option).then((result) => {});
+    axios.post(`/api/like-a-program`, option).then((result) => {});
   };
 
   handleCheck = () => {
     axios
       .get(
-        `${ApiUrl.Three}check/${this.props.users.userid}/in/${this.props.item.file}/programs`
+        `/api/check/${this.props.users.userid}/in/${this.props.item.file}/programs`
       )
       .then((result) => {
         if (result.data.contentId) {
@@ -59,7 +59,7 @@ class LikeProgram extends Component {
 
   removeLike = (data) => {
     axios
-      .post(`${ApiUrl.Three}like-program-remove`, this.state.item)
+      .post(`/api/like-program-remove`, this.state.item)
       .then((result) => {
         if (data == true) {
           this.setState({

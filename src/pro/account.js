@@ -25,7 +25,7 @@ class Account extends Component {
       let formData = new FormData();
       formData.append("file", event.target.files[0]);
       formData.append("Userid", this.props.user.userid);
-      axios.post(`${ApiUrl.Two}bannerimagepro`, formData).then((result) => {
+      axios.post(`/api/bannerimagepro`, formData).then((result) => {
         this.setState({
           previewBanner: result.data.banner,
         });
@@ -40,7 +40,7 @@ class Account extends Component {
     };
 
     axios
-      .post(`${ApiUrl.Two}update-my-info-for-myprofilepro`, option)
+      .post(`/api/update-my-info-for-myprofilepro`, option)
       .then((result) => {
         console.log(result.data);
       });
@@ -59,7 +59,7 @@ class Account extends Component {
       let option = {
         userid: this.props.user.userid,
       };
-      axios.post(`${ApiUrl.Two}remove-profileprop`, option).then((result) => {
+      axios.post(`/api/remove-profileprop`, option).then((result) => {
         this.setState({
           previewsIcon: result.data.profile,
         });
@@ -71,7 +71,7 @@ class Account extends Component {
       let option = {
         userid: this.props.user.userid,
       };
-      axios.post(`${ApiUrl.Two}remove-bannerpro`, option).then((result) => {
+      axios.post(`/api/remove-bannerpro`, option).then((result) => {
         this.setState({
           previewBanner: "",
         });
@@ -89,7 +89,7 @@ class Account extends Component {
       let formData = new FormData();
       formData.append("file", event.target.files[0]);
       formData.append("Userid", this.props.user.userid);
-      axios.post(`${ApiUrl.Two}profileimagepro`, formData).then((result) => {
+      axios.post(`/api/profileimagepro`, formData).then((result) => {
         console.log(result);
         this.setState({
           previewsIcon: result.data.profileUrl,

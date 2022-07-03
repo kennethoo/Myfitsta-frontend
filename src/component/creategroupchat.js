@@ -41,7 +41,7 @@ class CreatGroupChat extends Component {
       let formData = new FormData();
       formData.append("file", event.target.files[0]);
       axios
-        .post(`${ApiUrl.Messaging}profilegroupe`, formData)
+        .post(`/api/profilegroupe`, formData)
         .then((result) => {
           this.setState({
             profileGroup: result.data,
@@ -54,7 +54,7 @@ class CreatGroupChat extends Component {
     if (this.props.user) {
       if (this.props.user.Username) {
         axios
-          .get(`${ApiUrl.Three}Myfollowings/${this.props.user.userid}/myfitsta`)
+          .get(`/api/Myfollowings/${this.props.user.userid}/myfitsta`)
           .then((result) => {
             let list = [];
             if (result.data !== "no") {

@@ -49,7 +49,7 @@ class Editprogram extends Component {
       }
 
       axios
-        .post(`${ApiUrl.Two}update-my-program-detail-with-no-image`, option)
+        .post(`/api/update-my-program-detail-with-no-image`, option)
         .then((res) => {
           this.props.getProgramInfo();
         });
@@ -143,7 +143,6 @@ class Editprogram extends Component {
                 <input
                   onChange={this.handlepriece}
                   value={`${this.state.price !== null ? this.state.price : ""}`}
-                  placeholder="0"
                   className="username-profile"
                   placeholder={this.props.program.price}
                   type="number"

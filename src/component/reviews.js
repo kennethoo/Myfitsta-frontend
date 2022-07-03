@@ -16,7 +16,7 @@ class Reviews extends Component {
 
   loadReviews = () => {
     axios
-      .get(`${ApiUrl.Three}load-reviews/${this.props.match.params.id}`)
+      .get(`/api/load-reviews/${this.props.match.params.id}`)
       .then((res) => {
         if (res.data.length > 0) {
           this.setState({

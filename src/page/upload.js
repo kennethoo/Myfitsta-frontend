@@ -95,7 +95,7 @@ class Upload extends Component {
       for (let i = 0; i < this.state.tags.length; i++) {
         formData.append("kind", this.state.tags[i]);
       }
-      axios.post(`${ApiUrl.Two}upload`, formData).then((res) => {
+      axios.post(`/api/upload`, formData).then((res) => {
         this.props.history.push("/home");
       });
       this.setState({

@@ -14,7 +14,7 @@ class Unlocked extends Component {
     let option = {
       userid: this.props.user.userid,
     };
-    axios.post(`${ApiUrl.Three}get-my-programm`, option).then((res) => {
+    axios.post(`/api/get-my-programm`, option).then((res) => {
       if (res.data !== "no") {
         let list = [];
         res.data.data.forEach((item) => {

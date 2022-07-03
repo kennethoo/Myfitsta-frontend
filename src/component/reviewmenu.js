@@ -15,7 +15,7 @@ class ReviewMenu extends Component {
 
   handleDelete = () => {
     axios
-      .post(`${ApiUrl.Three}remove-my-rate`, this.props.item)
+      .post(`/api/remove-my-rate`, this.props.item)
       .then((result) => {
         this.props.updateReviews(this.props.counterReview + 1);
       })

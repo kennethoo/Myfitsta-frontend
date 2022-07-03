@@ -23,7 +23,7 @@ class PaymentmethodSub extends Component {
       userid: this.props.users.userid,
     };
 
-    axios.post(`${ApiUrl.Pay}my-payment-methode`, option).then((result) => {
+    axios.post(`/api/my-payment-methode`, option).then((result) => {
       if (result.data._id) {
         if (result.data.paymentTokens.length > 0) {
           let tochoose = result.data.paymentTokens.filter(
@@ -56,7 +56,7 @@ class PaymentmethodSub extends Component {
       loading: true,
     });
     axios
-      .post(`${ApiUrl.Pay}api/braintree/subscription`, option)
+      .post(`/api/api/braintree/subscription`, option)
       .then((result) => {
         if (result.data.success == true) {
           window.location.reload();

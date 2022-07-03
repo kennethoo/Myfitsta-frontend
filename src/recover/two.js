@@ -26,7 +26,7 @@ class Two extends Component {
         loading: true,
       });
       axios
-        .post(`${ApiUrl.Recover}verifie-your-code`, option)
+        .post(`/api/verifie-your-code`, option)
         .then((result) => {
           console.log(result);
           if (result.data.succes == true) {

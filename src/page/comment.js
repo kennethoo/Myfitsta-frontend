@@ -61,7 +61,7 @@ class Comment extends Component {
     };
     if (this.state.item.userId !== this.props.user.userid) {
       axios
-        .post(`${ApiUrl.Three}update-notification`, option, {
+        .post(`/api/update-notification`, option, {
           cancelToken: source.token,
         })
         .then((res) => {

@@ -39,7 +39,7 @@ class RelatedPost extends Component {
     });
     axios
       .get(
-        `${ApiUrl.Three}query-discover/${this.props.item.tags
+        `/api/query-discover/${this.props.item.tags
           .toString()
           .replace("#", "")}/${data}`
       )

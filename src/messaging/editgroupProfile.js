@@ -34,7 +34,7 @@ class EditGroupProfile extends Component {
       formData.append("file", event.target.files[0]);
       formData.append("conversationId", this.state.group.conversationId);
       axios
-        .post(`${ApiUrl.Messaging}change-group-icon`, formData)
+        .post(`/api/change-group-icon`, formData)
         .then((result) => {
           socket.emit("group-new-icon", {
             members: this.state.group.members,

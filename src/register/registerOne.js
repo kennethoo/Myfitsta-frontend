@@ -21,7 +21,7 @@ class RegisterOne extends Component {
       });
       console.log("g");
       axios
-        .post(`${ApiUrl.Recover}recover-my-account`, option)
+        .post(`/api/recover-my-account`, option)
         .then((result) => {
           if (result.data.succes == true) {
             this.props.handleNext(1);

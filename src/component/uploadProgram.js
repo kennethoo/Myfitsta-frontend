@@ -47,7 +47,7 @@ class UploadInProgram extends Component {
           loading: true,
         });
         axios
-          .post(`${ApiUrl.Two}video-or-image-for-the-program`, formData)
+          .post(`/api/video-or-image-for-the-program`, formData)
           .then((res) => {
             this.props.handlUpload(false);
             this.props.looadProgram();

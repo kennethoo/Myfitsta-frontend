@@ -31,7 +31,7 @@ class CommentMedia extends Component {
       numberoflike: 0,
     };
 
-    axios.post(`${ApiUrl.Three}add-reply`, option).then((res) => {
+    axios.post(`/api/add-reply`, option).then((res) => {
       let index = this.state.commentPost.findIndex(
         (element) => element._id === id
       );
@@ -50,7 +50,7 @@ class CommentMedia extends Component {
 
   loadCommnet = () => {
     axios
-      .get(`${ApiUrl.Three}load-commnetmedia/${this.props.match.params.id}`)
+      .get(`/api/load-commnetmedia/${this.props.match.params.id}`)
       .then((res) => {
         if (res.data !== "no") {
           this.setState({
@@ -81,7 +81,7 @@ class CommentMedia extends Component {
         comment: "",
       });
       document.querySelector(".hold-edit-bio").innerHTML = "";
-      axios.post(`${ApiUrl.Three}add-new-commnetmedia`, option).then((res) => {
+      axios.post(`/api/add-new-commnetmedia`, option).then((res) => {
         let list = [...this.state.commentPost, res.data];
         this.setState({
           commentPost: list,

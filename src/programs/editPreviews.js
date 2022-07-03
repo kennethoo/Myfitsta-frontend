@@ -28,7 +28,7 @@ class EditPreviews extends Component {
       formData.append("file", file[0]);
       formData.append("programId", this.props.program.programId);
       axios
-        .post(`${ApiUrl.Two}update-my-program-detail-with-image`, formData)
+        .post(`/api/update-my-program-detail-with-image`, formData)
         .then((res) => {
           this.props.getProgramInfo();
           this.props.handlOpen(false);

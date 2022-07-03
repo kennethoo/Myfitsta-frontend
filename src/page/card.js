@@ -60,7 +60,7 @@ class Card extends Component {
       selected: !status,
     };
     axios
-      .post(`${ApiUrl.Three}update-my-card-info`, option, {
+      .post(`/api/update-my-card-info`, option, {
         cancelToken: source.token,
       })
       .then((result) => {});

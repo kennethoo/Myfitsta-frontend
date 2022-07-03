@@ -11,7 +11,7 @@ class LastMessage extends Component {
   getLastConversation = () => {
     if (this.props.item.conversationId.length > 0) {
       axios
-        .get(`${ApiUrl.Three}last-message/${this.props.item.conversationId}`)
+        .get(`/api/last-message/${this.props.item.conversationId}`)
         .then((res) => {
           if (res.data.content) {
             this.setState({

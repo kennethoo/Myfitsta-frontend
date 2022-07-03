@@ -28,7 +28,7 @@ class RegisterTwo extends Component {
         code: parseInt(this.state.code),
       };
       axios
-        .post(`${ApiUrl.Recover}verifie-your-code`, option)
+        .post(`/api/verifie-your-code`, option)
         .then((result) => {
           if (result.data.succes == true) {
             this.props.handleNext(2);

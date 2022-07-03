@@ -132,7 +132,7 @@ class Myprogram extends Component {
   looadProgram = () => {
     axios
       .get(
-        `${ApiUrl.Two}loaddMyProgramContainer/${this.state.program.programId}/${this.props.user.userid}`,
+        `/api/loaddMyProgramContainer/${this.state.program.programId}/${this.props.user.userid}`,
         { cancelToken: source.token }
       )
       .then((res) => {

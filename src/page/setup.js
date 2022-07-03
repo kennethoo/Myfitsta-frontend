@@ -141,7 +141,7 @@ class Setup extends Component {
       if (this.state.kind == 0) {
         if (this.state.plan.length > 0) {
           axios
-            .post(`${ApiUrl.Pay}add-a-new-myfitsta-user`, option)
+            .post(`/api/add-a-new-myfitsta-user`, option)
             .then((res) => {
               window.location.reload();
             });
@@ -149,7 +149,7 @@ class Setup extends Component {
         }
       } else {
         axios
-          .post(`${ApiUrl.Pay}add-a-new-myfitsta-user`, option)
+          .post(`/api/add-a-new-myfitsta-user`, option)
           .then((res) => {
             window.location.reload();
           });

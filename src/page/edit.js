@@ -58,7 +58,7 @@ class Edit extends Component {
       let formData = new FormData();
       formData.append("file", event.target.files[0]);
       formData.append("Userid", this.props.user.userid);
-      axios.post(`${ApiUrl.Two}bannerimage`, formData).then((result) => {
+      axios.post(`/api/bannerimage`, formData).then((result) => {
         this.setState({
           previewBanner: result.data.banner,
         });
@@ -74,7 +74,7 @@ class Edit extends Component {
       let option = {
         userid: this.props.user.userid,
       };
-      axios.post(`${ApiUrl.Two}remove-profile`, option).then((result) => {
+      axios.post(`/api/remove-profile`, option).then((result) => {
         console.log(result);
         this.setState({
           previewsIcon: result.data.profile,
@@ -88,7 +88,7 @@ class Edit extends Component {
       let option = {
         userid: this.props.user.userid,
       };
-      axios.post(`${ApiUrl.Two}remove-banner`, option).then((result) => {
+      axios.post(`/api/remove-banner`, option).then((result) => {
         this.setState({
           previewBanner: "",
         });
@@ -107,7 +107,7 @@ class Edit extends Component {
       formData.append("file", event.target.files[0]);
       formData.append("Userid", this.props.user.userid);
 
-      axios.post(`${ApiUrl.Two}profileimage`, formData).then((result) => {
+      axios.post(`/api/profileimage`, formData).then((result) => {
         this.setState({
           previewsIcon: result.data.profile,
         });
@@ -161,7 +161,7 @@ class Edit extends Component {
         username: this.state.username,
         email: this.props.user.email,
       };
-      axios.post(`${ApiUrl.Two}update-username`, option).then((data) => {
+      axios.post(`/api/update-username`, option).then((data) => {
         if (data.data.succes == true) {
           window.location.reload();
         } else {
@@ -189,7 +189,7 @@ class Edit extends Component {
               bio: this.state.bio,
             };
             axios
-              .post(`${ApiUrl.Two}update-my-info-for-myprofile`, option)
+              .post(`/api/update-my-info-for-myprofile`, option)
               .then((result) => {
                 window.location.reload();
               });
@@ -207,7 +207,7 @@ class Edit extends Component {
             bio: this.state.bio,
           };
           axios
-            .post(`${ApiUrl.Two}update-my-info-for-myprofile`, option)
+            .post(`/api/update-my-info-for-myprofile`, option)
             .then((result) => {
               window.location.reload();
             });

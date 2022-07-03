@@ -34,7 +34,7 @@ class MyfistaProAc extends Component {
         userid: this.props.users.userid,
       };
       axios
-        .post(`${ApiUrl.Three}activate-myfit-sta-pro`, option)
+        .post(`/api/activate-myfit-sta-pro`, option)
         .then((data) => {
           if (data.data.succes == true) {
             this.props.history.push("/setup");

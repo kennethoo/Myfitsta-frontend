@@ -22,7 +22,7 @@ class ConversationDetail extends Component {
       friend: this.props.match.params.id,
     };
     axios
-      .post(`${ApiUrl.Messaging}delete-conversation`, option)
+      .post(`/api/delete-conversation`, option)
       .then((result) => {
         let list = this.props.inbox.filter(
           (item) => item.userid !== this.props.match.params.id
@@ -39,7 +39,7 @@ class ConversationDetail extends Component {
     };
     this.props.handleDetail(false);
     this.props.handleblock(true);
-    axios.post(`${ApiUrl.Three}block-this-dude`, option).then((result) => {});
+    axios.post(`/api/block-this-dude`, option).then((result) => {});
   };
 
   handleDeblock = () => {
@@ -50,7 +50,7 @@ class ConversationDetail extends Component {
     this.props.handleDetail(false);
     this.props.handleblock(false);
     axios
-      .post(`${ApiUrl.Three}remove-this-dude-block`, option)
+      .post(`/api/remove-this-dude-block`, option)
       .then((result) => {
         console.log(result);
       });

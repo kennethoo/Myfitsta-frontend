@@ -52,7 +52,7 @@ class Group extends Component {
   renderConversation = () => {
     axios
       .get(
-        `${ApiUrl.Messaging}their-conversation/${
+        `/api/their-conversation/${
           this.state.group.conversationId
         }/${"no"}/${"no"}`
       )
@@ -78,7 +78,7 @@ class Group extends Component {
 
     axios
       .get(
-        `${ApiUrl.Messaging}the-group/${this.props.match.params.id}/${this.props.user.userid}`
+        `/api/the-group/${this.props.match.params.id}/${this.props.user.userid}`
       )
       .then((res) => {
         if (res.data) {
@@ -122,7 +122,7 @@ class Group extends Component {
           kind: "message",
         },
       };
-      axios.post(`${ApiUrl.Messaging}new-message-group`, option).then((res) => {
+      axios.post(`/api/new-message-group`, option).then((res) => {
         if (res.data._id) {
           let message = res.data.message[res.data.message.length - 1];
           message.conversationId = this.props.match.params.id;

@@ -13,7 +13,7 @@ class IconProfile extends Component {
     live: null,
   };
   checklive = () => {
-    axios.get(`${ApiUrl.Three}check-live/${this.props.user}`).then((res) => {
+    axios.get(`/api/check-live/${this.props.user}`).then((res) => {
       if (res.data !== "no") {
         this.setState({
           live: res.data,
@@ -35,7 +35,7 @@ class IconProfile extends Component {
         icon: userFind[0].icon,
       });
     } else {
-      axios.get(`${ApiUrl.Three}icon/${this.props.user}`).then((res) => {
+      axios.get(`/api/icon/${this.props.user}`).then((res) => {
         if (res.data !== "no") {
           this.setState({
             icon: res.data,

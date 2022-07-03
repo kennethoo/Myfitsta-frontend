@@ -13,9 +13,9 @@ export default class ShowLive extends Component {
 
   getOnline = () => {
     axios
-      .get(`${ApiUrl.Three}open-live-room/${this.props.user.userid}`)
+      .get(`/api/open-live-room/${this.props.user.userid}`)
       .then((res) => {
-        if (res.data !== "null") {
+        if (res.data !== "") {
           this.setState({
             open: true,
             online: res.data.account.reverse(),
