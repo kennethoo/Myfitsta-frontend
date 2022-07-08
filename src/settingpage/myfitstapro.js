@@ -22,7 +22,6 @@ class MyfistaProAc extends Component {
   };
 
   activate = () => {
-    console.log("rjej");
     if (
       this.props.users.postnumber >= 0 &&
       this.props.users.numberfollowings >= 0
@@ -52,6 +51,7 @@ class MyfistaProAc extends Component {
   }
 
   componentDidMount = () => {
+    //this.activate()
     if (this.props.match.params.id == "myfistapro") {
     }
     if (

@@ -63,24 +63,23 @@ class Billing extends Component {
                 <AiFillBank />
               </div>
               <div className="wiirr">
-                {" "}
                 {this.state.wallet.wallet.length > 0 ? (
                   <div>
                     <div>Checking ending:3333</div>
                     <div>Amzat Gandonou</div>
                   </div>
                 ) : (
-                  "To be able to receive payment, add a Payment method"
+                  "Add your PayPal email to get Paid"
                 )}
               </div>
             </div>
             {this.state.wallet.wallet.length > 0 ? (
               <button onClick={this.removeMethode} className="jkwiriur">
-                Remove Payment Method
+              Edit PayPal Email
               </button>
             ) : (
               <button onClick={this.hnddleclick} className="jkwiriur">
-                Add Payment Method
+                PayPal Email
               </button>
             )}
           </div>

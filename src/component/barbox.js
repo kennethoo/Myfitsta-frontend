@@ -9,17 +9,16 @@ class BaxBar extends Component {
           <div className="bulletrr">1</div>
           <div className="bar-butiit"></div>
         </div>
-
-        <div className={`stepw ${this.props.bar > 2 ? "active" : ""}`}>
+        <div className={`stepw ${this.props.bar > 1 ? "active" : ""}`}>
           <div className="bulletrr">2</div>
           <div className="bar-butiit"></div>
         </div>
-        <div className={`stepw ${this.props.bar > 4 ? "active" : ""}`}>
+        <div className={`stepw ${this.props.bar > 2 ? "active" : ""}`}>
           <div className="bulletrr">3</div>
           <div className="bar-butiit"></div>
         </div>
-        <div className={`stepw ${this.props.bar > 4 ? "active" : ""}`}>
-          <div className="bulletrr">3</div>
+        <div className={`stepw ${this.props.bar > 3 ? "active" : ""}`}>
+          <div className="bulletrr">4</div>
         </div>
       </div>
     );

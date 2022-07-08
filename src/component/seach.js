@@ -210,7 +210,7 @@ class Search extends Component {
                           <div className="bfjirtnj"></div>
                           <div onClick={() => this.addToRecent(item.userid)}>
                             <Username link={true} user={item.userid} />
-                            <Subinfo user={item.userid} />
+                           {/* <Subinfo user={item.userid} />*/}
                           </div>
                         </div>
                         <div
@@ -240,7 +240,7 @@ class Search extends Component {
                         <div className="bfjirtnj"></div>
                         <div onClick={() => this.addToRecent(item.userid)}>
                           <Username link={true} user={item.userid} />
-                          <Subinfo user={item.userid} />
+                          {/*<Subinfo user={item.userid} />*/}
                         </div>
                       </div>
                       <div

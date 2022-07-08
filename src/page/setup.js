@@ -10,7 +10,6 @@ import ApiUrl from "../url";
 import SelectPlan from "../setup/selectplan";
 import Verification from "../setup/verification";
 import BaxBar from "../component/barbox";
-import Registraction from "../setup/registraction";
 import Select from "../setup/setuppage";
 import { withRouter } from "react-router-dom";
 let source;
@@ -52,7 +51,7 @@ class Setup extends Component {
           this.setState({
             loadingButtton: false,
           });
-          this.next(4);
+          this.next(2);
         }
       });
   };
@@ -124,7 +123,6 @@ class Setup extends Component {
           plan: array,
         });
       } else {
-        console.log("something went wrong");
       }
     }
   };
@@ -138,24 +136,11 @@ class Setup extends Component {
       accountType: this.state.kind,
     };
     if (this.state.kind !== null) {
-      if (this.state.kind == 0) {
-        if (this.state.plan.length > 0) {
-          axios
-            .post(`/api/add-a-new-myfitsta-user`, option)
+      axios.post(`/api/add-a-new-myfitsta-user`, option)
             .then((res) => {
-              window.location.reload();
-            });
-        } else {
-        }
-      } else {
-        axios
-          .post(`/api/add-a-new-myfitsta-user`, option)
-          .then((res) => {
-            window.location.reload();
-          });
-      }
-    } else {
-    }
+              this.props.history.push("/myfitstapro");
+            }); 
+    } 
   };
 
   selectOption = (data) => {
@@ -220,9 +205,8 @@ class Setup extends Component {
               <div className="box-that-container-thecoursecro">
                 {this.state.step == 1 ? (
                   <div className="wpaer-theslider active  ">
-                    <BaxBar bar={1} />
                     <div className="welcom-title">
-                      Introduction to MyFitstaPro
+                      Welcome to MYFITSTAPRO
                     </div>
                     <div className="describe-ite-simple">
                       <div className="wtapthensjjfjtr">
@@ -332,6 +316,7 @@ class Setup extends Component {
                 {this.state.step == 2 ? (
                   <div className="wpaer-theslider active">
                     <Select
+                      next={this.next}
                       checkIfSelecthc={this.checkIfSelecthc}
                       kind={this.state.kind}
                       selectOption={this.selectOption}
@@ -357,7 +342,7 @@ class Setup extends Component {
 
                 {this.state.step == 4 ? (
                   <div className="wpaer-theslider active">
-                    <Agreement Activatemyfistapro={this.Activatemyfistapro} />
+                    <Agreement  next={this.next} Activatemyfistapro={this.Activatemyfistapro} />
                   </div>
                 ) : (
                   ""

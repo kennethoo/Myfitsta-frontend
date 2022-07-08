@@ -3,7 +3,7 @@ module.exports = (app) => {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "https://myfitsta-backend.herokuapp.com/",
+      target: "http://localhost:5000/",
       changeOrigin: true,
     })
   );

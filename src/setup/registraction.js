@@ -155,7 +155,6 @@ class Registraction extends Component {
   render() {
     return (
       <div className="wrpaeorrr">
-        <BaxBar bar={2} />
         <div className="welcom-title">Now let's register your account </div>
         {this.state.nextStep == false ? (
           <div className="jsjfoijeif">
@@ -235,4 +234,4 @@ const mapstateToProps = (state) => {
   };
 };
 
-export default connect(mapstateToProps)(Registraction);
+//export default connect(mapstateToProps)(Registraction);

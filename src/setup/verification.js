@@ -61,7 +61,7 @@ class Verification extends Component {
   render() {
     return (
       <div className="werpooor">
-        <BaxBar bar={3} />
+       
         <div className="welcom-title">Let's verify your identity</div>
         <div className="jsjfoijeif">
           Ooof we are amost done with steuoing your myfitsta , now we just need

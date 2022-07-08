@@ -2,15 +2,18 @@ import React, { Component } from "react";
 import { HiCheck } from "react-icons/hi";
 import { BsArrowRepeat, BsGraphUp } from "react-icons/bs";
 import BaxBar from "../component/barbox";
-
+import { BiArrowBack } from "react-icons/bi";
 class Select extends Component {
   state = {};
   render() {
     return (
       <div className="wrpaeorrr">
-        <BaxBar bar={2} />
-        <div className="titlekioe">
-          <h4>Woah Now the fun part , choose your acount type</h4>
+        
+        <div className="theslider">
+          <div onClick={() => this.props.next(1)} className="close-that">
+            <BiArrowBack />
+          </div>
+          <div className="wwwr-text">Select your account</div>
         </div>
         <div className="tabsrjjrbs">
           <div className="wtapthensjjfjtr">

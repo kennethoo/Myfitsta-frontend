@@ -119,7 +119,7 @@ class SubscriberList extends Component {
                           </div>
                           <div className="wirjsjjfkkfkf">
                             <Username link={true} user={item.subScriber} />
-                            <Subinfo user={item.subScriber} />
+                            {/*<Subinfo user={item.subScriber} />*/}
                           </div>
                         </div>
                       </InView>
@@ -130,7 +130,7 @@ class SubscriberList extends Component {
                         </div>
                         <div className="wirjsjjfkkfkf">
                           <Username link={true} user={item.subScriber} />
-                          <Subinfo user={item.subScriber} />
+                          {/*<Subinfo user={item.subScriber} />*/}
                         </div>
                       </div>
                     )}

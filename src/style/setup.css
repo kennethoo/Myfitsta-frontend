@@ -36,7 +36,6 @@
   height: 100vh;
   display: inline-flex;
   overflow: scroll;
-
   align-items: flex-start;
 
   flex-direction: column;
@@ -85,6 +84,14 @@
 }
 .stepw.active .bar-butiit {
   background-color: #6f56e5;
+}
+.sucbrcriotion-thatprice{
+  margin-top: 10px;
+}
+.wwwr-text{
+  width: 100%;
+  color: var(--text);
+  font-size: 20px;
 }
 .wrape3gkjer {
   display: flex;
@@ -442,10 +449,4 @@ input[type="number"] {
   }
 }
 
-@media only screen and (max-height: 800px) {
-  .hold-thewelcome0-courseroell {
-    overflow: scroll;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
+

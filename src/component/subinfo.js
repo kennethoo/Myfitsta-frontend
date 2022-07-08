@@ -18,13 +18,14 @@ class Subinfo extends Component {
         `/api/check-in-about-him/her/${this.props.user}/${this.props.users.userid}`
       )
       .then((res) => {
+        console.log(res.data)
         if (res.data.fullName) {
           this.setState({
             fullName: res.data.fullName,
           });
         } else {
           this.setState({
-            list: res.data,
+           // list: res.data,
           });
         }
       });

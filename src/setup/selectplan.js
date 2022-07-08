@@ -7,16 +7,15 @@ class SelectPlan extends Component {
   render() {
     return (
       <div className="wrpaeorrr">
-        <BaxBar bar={3} />
+       
         <div className="theslider">
-          <div onClick={() => this.props.next(2)} className="backjtjj">
+          <div onClick={() => this.props.next(2)} className="close-that">
             <BiArrowBack />
           </div>
+          <div className="wwwr-text">Choose your subscrition plan</div>
         </div>
-        <div className="welcom-title">Choose your subscrition plan</div>
+        
         <div className="sucbrcriotion-thatprice">
-          <div className="sucbt-deing-tile">Subscrition plan</div>
-
           <div className="wraper-thesubscriotion">
             <div className="wrepr-arounbd0the-plan">
               <div className="div-wiri">
