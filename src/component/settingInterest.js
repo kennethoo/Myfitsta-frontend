@@ -12,7 +12,7 @@ class Settinginterest extends Component {
     if (e != null) {
       if (e.currentTarget.parentElement.parentElement !== null) {
         let box = e.currentTarget.parentElement.parentElement;
-        console.log(window.innerHeight - box.getBoundingClientRect().bottom);
+        (window.innerHeight - box.getBoundingClientRect().bottom);
         if (window.innerHeight - box.getBoundingClientRect().bottom <= 200) {
           this.setState({
             top: false,

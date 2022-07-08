@@ -8,7 +8,7 @@ class PreviewVideo extends Component {
   };
 
   playvideo = () => {
-    console.log("run");
+    ("run");
     this.setState({
       playing: !this.state.playing,
     });

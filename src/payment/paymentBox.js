@@ -19,7 +19,7 @@ class PaymentOption extends Component {
       userid: "1",
     };
     //axios.post("http://localhost:3500/pay-the-program",option).then((result)=>{
-    // console.log(result)
+    // (result)
     //})
   }
 

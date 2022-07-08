@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import braintree from "braintree-web";
 import LoadingSpin from "../component/loadingspin";
-import ApiUrl from "../url";
 import { connect } from "react-redux";
 import axios from "axios";
 class Field extends Component {

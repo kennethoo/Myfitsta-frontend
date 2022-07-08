@@ -130,7 +130,7 @@ class App extends Component {
 
   componentWillMount() {
     this.props.history.listen((location, action) => {
-      console.log("on route change");
+      ("on route change");
     });
   }
   componentDidMount() {

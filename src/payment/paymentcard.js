@@ -19,7 +19,7 @@ class PaymentCard extends Component {
         `/api/api/braintree/v1/sandbox`,
         nonce
       );
-      console.log(response);
+      (response);
     } catch (err) {
       console.error(err);
     }

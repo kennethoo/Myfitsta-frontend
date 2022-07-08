@@ -39,7 +39,7 @@ class Clip extends Component {
           parseInt(curentTimeur.innerText) ===
           this.convert(parseInt(video.duration.toFixed(2)))
         ) {
-          console.log("rj");
+          ("rj");
           clearInterval(this.state.x);
           video.stop();
           this.setState({

@@ -53,7 +53,7 @@ class Billing extends Component {
 
             <div className="wisjfjfhw">
               <span>$</span>
-              <p>{this.state.wallet.ToPay}</p>
+              <p>{this.state.wallet.ToPay.toFixed(3)}</p>
             </div>
           </div>
           <div className="sjfiejsfkjfj">
@@ -65,8 +65,8 @@ class Billing extends Component {
               <div className="wiirr">
                 {this.state.wallet.wallet.length > 0 ? (
                   <div>
-                    <div>Checking ending:3333</div>
-                    <div>Amzat Gandonou</div>
+                    <div>Email: {this.state.wallet.wallet[0].email}</div>
+        
                   </div>
                 ) : (
                   "Add your PayPal email to get Paid"

@@ -419,7 +419,7 @@
   position: relative;
   width: calc(100% - 10px);
   min-height: 45px;
-  border-radius: 30px;
+  border-radius: 5px;
 
   display: flex;
   justify-content: center;

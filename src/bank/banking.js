@@ -7,12 +7,7 @@ class Banking extends Component {
   state = {
     loading: false,
     data: {
-      userid: "",
-      username: "",
-      accountType: "",
-      accountNumber: "1111222233331111",
-      routingNumber: "021000021",
-      accountName: "Amzat Gandonou",
+      email: "",
     },
   };
 
@@ -26,9 +21,7 @@ class Banking extends Component {
   };
   savedetail = () => {
     if (
-      this.state.data.accountNumber.length > 9 &&
-      this.state.data.accountNumber.length > 11 &&
-      this.state.data.accountName.length > 3
+      this.state.data.email.length > 0 
     ) {
       this.setState({
         loading: true,
@@ -48,35 +41,11 @@ class Banking extends Component {
     }
   };
   handleChange = (e) => {
-    let data;
-    switch (e.target.name) {
-      case "routingNumber":
-        data = this.state.data;
-        data.routingNumber = e.target.value;
-        this.setState({
-          data: data,
-        });
-        break;
-      case "accountNumber":
-        data = this.state.data;
-        data.accountNumber = e.target.value;
-        this.setState({
-          data: data,
-        });
-        break;
-      case "accountName":
-        data = this.state.data;
-        data.accountName = e.target.value;
-        this.setState({
-          data: data,
-        });
-        break;
-
-      default:
-        this.setState({
-          //fullname: e.target.value
-        });
-    }
+    let data={};
+    data.email = e.target.value;
+    this.setState({
+      data: data,
+    })
   };
   render() {
     return (
@@ -92,52 +61,21 @@ class Banking extends Component {
               {" "}
               <IoCloseSharp />
             </button>
-            <p>Add your banking details</p>
+            <p>Add Your Paypal Email</p>
           </div>
 
           <div className="wrapunf-roup">
+        
             <div className="edit-box-profile">
-              <label htmlFor="username">Routing Number</label>
+              <label htmlFor="username">PayPal Email</label>
               <input
                 onChange={this.handleChange}
                 className="username-profile"
-                type="number"
-                name="routingNumber"
-                placeholder={"123456789"}
-                value={this.state.data.routingNumber}
-              />
-            </div>
-            <div className="edit-box-profile">
-              <label htmlFor="username">Account Number</label>
-              <input
-                onChange={this.handleChange}
-                className="username-profile"
-                type="number"
-                name="accountNumber"
-                placeholder={"123456789012"}
-                value={this.state.data.accountNumber}
-              />
-            </div>
-            <div className="edit-box-profile">
-              <label htmlFor="username">Account Type</label>
-              <input
-                onChange={this.handleChange}
-                className="username-profile"
-                type="number"
-                name="routingNumber"
-                placeholder={"123456789"}
-                value={this.state.data.routingNumber}
-              />
-            </div>
-            <div className="edit-box-profile">
-              <label htmlFor="username">Account Name</label>
-              <input
-                onChange={this.handleChange}
-                className="username-profile"
+                required
                 type="text"
-                name="accountName"
-                placeholder={"John Doe"}
-                value={this.state.data.accountName}
+                name="email"
+                placeholder={"name@gmail.com"}
+                value={this.state.data.email}
               />
             </div>
           </div>
@@ -149,7 +87,7 @@ class Banking extends Component {
               className={`button button--small button--green ${
                 this.state.loading == true ? "loading" : ""
               }`}
-              value={`${this.state.loading == true ? "" : "Link bank account"}`}
+              value={`${this.state.loading == true ? "" : "Save Email"}`}
               id="submit"
             />
             {this.state.loading == true ? (

@@ -18,7 +18,7 @@ class PaymentSub extends Component {
     };
 
     //axios.post("http://localhost:3500/pay-the-program",option).then((result)=>{
-    // console.log(result)
+    // (result)
     //})
   }
 

@@ -19,7 +19,6 @@ class RegisterOne extends Component {
       this.setState({
         loading: true,
       });
-      console.log("g");
       axios
         .post(`/api/recover-my-account`, option)
         .then((result) => {

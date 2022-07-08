@@ -3884,9 +3884,12 @@ body {
 .box-wraper-comment {
   max-width: 400px;
   width: 100%;
-  height: 100%;
-  background: var(--main-bg-side);
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 99%;
+  background: var(--main-bg-box);
   display: flex;
+  border-radius: 5px;
   flex-direction: column;
 }
 
@@ -7877,7 +7880,10 @@ video {
     display: none;
   }
   .box-wraper-comment {
+    margin-left: 0px;
+    margin-right: 0px;
     max-width: 100%;
+    height: 100%;
   }
 }
 

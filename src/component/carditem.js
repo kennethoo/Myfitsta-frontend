@@ -20,7 +20,7 @@ class CardItem extends Component {
   };
 
   componentDidUpdate = () => {
-    console.log("run");
+    ("run");
   };
   getItem = () => {
     axios
