@@ -63,7 +63,7 @@ class Registraction extends Component {
         if (result.data.message == "created") {
           this.props.move(3);
         } else {
-          (result);
+          console.log(result);
         }
       });
   };

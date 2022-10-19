@@ -1,5 +1,5 @@
 const ApiUrl = {
-  One: "https://myfitsta-backend.herokuapp.com/",
+  One: "https://myfitsta-backend-app-server.herokuapp.com/",
   content: "https://myfitsta.s3.us-east-2.amazonaws.com/",
   network: "https://servernetwr.herokuapp.com",
   streaming: "http://localhost:9500/",
@@ -17,7 +17,7 @@ const ApiUrlOrigine = {
   streaming: "http://localhost:9500/",
 };
 const ApiUrlNew = {
-  One: "https://myfitsta-backend.herokuapp.com/",
+  One: "https://myfitsta-backend-app-server.herokuapp.com/",
   Two: "https://servernine.herokuapp.com/",
   Three: "https://serverthree.herokuapp.com/",
   Messaging: "https://servermessaging.herokuapp.com/",

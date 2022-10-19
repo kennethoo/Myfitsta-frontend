@@ -134,7 +134,7 @@ class Watcher extends Component {
         socket.on("wath-accepted", (infolive) => {
           if (infolive.succes == true) {
             const desc = new RTCSessionDescription(infolive.sdp);
-            peer.setRemoteDescription(desc).catch((e) => (e));
+            peer.setRemoteDescription(desc).catch((e) => console.log(e));
           } else {
             this.props.history.goBack();
           }
